@@ -194,7 +194,6 @@
 			}
 		}
 		public function buildConfig(){
-
 			
 			$this->fetcher('https://github.com/mejuliver/loader-env-repo/archive/refs/heads/master.zip',__DIR__.'/temp/loader.zip');
 			
@@ -204,6 +203,7 @@
 
 			$loader_folder = false;
 
+
 			if ($res === TRUE) {
 				$zip->extractTo(__DIR__.'/temp');
 				$zip->close();
@@ -212,12 +212,11 @@
 				// update the .env file	
 			  	foreach (new \DirectoryIterator(__DIR__.'/temp') as $fileInfo) {
 				    if($fileInfo->isDot()) continue;
-				    
-			    	if( strpos($fileInfo->getFilename(),'loader-env-repo') != false ){
+			    	
+			    	if( strpos($fileInfo->getFilename(),'loader-env-repo') == 0 || strpos($fileInfo->getFilename(),'loader-env-repo') ){
 			    		$loader_folder = $fileInfo->getFilename();
 			    		break;
 			    	}
-				    
 				}
 			} else {
 			  print_r('Unable to process loader file');
