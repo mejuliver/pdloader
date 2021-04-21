@@ -285,7 +285,7 @@
 				// update the .env file	
 			  	foreach (new \DirectoryIterator(__DIR__.'/temp') as $fileInfo) {
 				    if($fileInfo->isDot()) continue;
-			    	if( strpos($fileInfo->getFilename(),'loader-module-'.strtolower($m)) != false ){
+			    	if( strpos($fileInfo->getFilename(),'loader-module-'.strtolower($m)) == 0 || strpos($fileInfo->getFilename(),'loader-module-'.strtolower($m)) ){
 			    		$m_folder = $fileInfo->getFilename();
 			    		break;
 			    	}
