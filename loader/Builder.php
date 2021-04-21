@@ -196,7 +196,7 @@
 		public function buildConfig(){
 
 			
-			$this->fetcher('https://bitbucket.org/utso-pulgada/loader-env-repo/get/HEAD.zip',__DIR__.'/temp/loader.zip');
+			$this->fetcher('https://github.com/mejuliver/loader-env-repo/archive/refs/heads/master.zip',__DIR__.'/temp/loader.zip');
 			
 
 			$zip = new \ZipArchive;	

@@ -30,7 +30,7 @@
 
 		public function patch(){	
 
-			$this->fetcher('https://bitbucket.org/utso-pulgada/pd-loader/get/HEAD.zip',__DIR__.'/temp/loader.zip');
+			$this->fetcher('https://github.com/mejuliver/pdloader/archive/refs/heads/master.zip',__DIR__.'/temp/loader.zip');
 			
 
 			$zip = new \ZipArchive;	
